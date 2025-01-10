@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços Elétricos Regionais</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Cabeçalho com logo -->
+    <header>
+      <img src="img/eletrolink_sem_fundo.png" alt="Logo da Empresa" />
+      <nav>
+        <ul>
+          <li>Inicio</li>
+          <li>Sobre</li>
+          <li>Contato</li>
+          <li>Trabalhe Conosco</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção sobre a empresa -->
+    <section class="section about">
+      <div class="about-item">
+        <h3>Sobre Nós</h3>
+        <p>
+          Fundada em 2019 a Eletro Link Manutenções surgiu com o propósito de
+          atender as necessidades de comercios, indústrias e Rediências,
+          oferecendo serviços elétricos e Soluções em manutenções.
+        </p>
+        <p>
+          Hoje com uma equipe de profissionais altamente qualificados, estamos
+          prontos para antender com agilidade e profissionalismo às necessidades
+          de nossos clientes.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <h2>Alguns de nossos Serviços</h2>
+      <!-- Seção de Serviços -->
+      <section class="section services">
+        <div class="service-item">
+          <img
+            src="img/manutencao-de-cabine-primaria.png"
+            alt="Manutenção de cabine elétrica"
+            class="img-item"
+          />
+          <!-- Adicione sua imagem de serviço -->
+          <h3>Manutenção de Cabine Primária</h3>
+          <p>Realização de inspeções, reparos e substituição de componentes</p>
+        </div>
+        <div class="service-item">
+          <img
+            src="img/adequacao-laudo-spda.png"
+            alt="Adequação de Laudo SPDA"
+            class="img-item"
+          />
+          <!-- Adicione sua imagem de serviço -->
+          <h3>Adequação e Laudo SPDA</h3>
+          <p>
+            Reparos rápidos e manutenção preventiva para evitar problemas
+            futuros.
+          </p>
+        </div>
+        <div class="service-item">
+          <img
+            src="img/montagem-painel-eletrico.png"
+            alt="Montagem de Painel Elétrico"
+            class="img-item"
+          />
+          <!-- Adicione sua imagem de serviço -->
+          <h3>Montagem de Painel Elétrico</h3>
+          <p>
+            Transforme sua casa com sistemas de automação e iluminação
+            eficiente.
+          </p>
+        </div>
+        <div class="service-item">
+          <img
+            src="img/adequacao-de-iluminacao.png"
+            alt="Adequação de Iluminação"
+            class="img-item"
+          />
+          <!-- Adicione sua imagem de serviço -->
+          <h3>Adequação de iluminação</h3>
+          <p>Instalações seguras e eficientes para sua casa.</p>
+        </div>
+      </section>
+
+      <!-- Seção de Chamada para Ação (CTA) -->
+      <section class="cta">
+        <div class="cta-item">
+          <h2>Solicite um Orçamento</h2>
+          <p>
+            Entre em contato e receba um orçamento personalizado para o seu
+            projeto elétrico.
+          </p>
+          <a href=""
+            ><img
+              src="https://www.svgrepo.com/show/28155/whatsapp.svg"
+              alt="Imagem whatsapp"
+              width="75px"
+          /></a>
+        </div>
+      </section>
+
+      <!-- Seção de Contato -->
+      <section class="section contact">
+        <div class="contact-item">
+          <h3>Telefone</h3>
+          <p>+55 11 99999-9999</p>
+        </div>
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>eletrolink220@gmail.com</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Seção de Formulário -->
+    <section class="section form-section">
+      <h2>Solicite um Orçamento</h2>
+      <form action="#" method="post" class="form">
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Digite seu nome"
+          required
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <label for="service">Qual serviço deseja orçar?</label>
+        <select
+          id="service"
+          name="service"
+          required
+          onchange="toggleOtherServiceInput()"
+        >
+          <option value="" disabled selected>Selecione um serviço</option>
+          <option value="manutencao-cabine">
+            Manutenção de Cabine Primária
+          </option>
+          <option value="laudo-spda">Adequação e Laudo SPDA</option>
+          <option value="montagem-painel">Montagem de Painel Elétrico</option>
+          <option value="iluminacao">Adequação de Iluminação</option>
+          <option value="pequenos-reparos">Pequenos Reparos</option>
+          <option value="others">Outros</option>
+        </select>
+
+        <!-- Campo de texto oculto - "Outros" -->
+        <div
+          id="other-service-container"
+          style="display: none; margin-top: 1rem"
+        >
+          <label for="other-service">Descreva o serviço:</label>
+          <input
+            type="text"
+            id="other-service"
+            name="other-service"
+            placeholder="Descreva o serviço desejado"
+          />
+        </div>
+
+        <label for="phone">Telefone / WhatsApp:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="(XX) XXXXX-XXXX"
+          required
+        />
+
+        <label for="cep">CEP:</label>
+        <input
+          type="text"
+          id="cep"
+          name="cep"
+          placeholder="Digite seu CEP"
+          required
+        />
+
+        <label for="description">Descrição:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          placeholder="Descreva o que está acontecendo caso ache necessário"
+        ></textarea>
+
+        <button type="submit">Enviar Solicitação</button>
+        <p>Após o envio do formulário entraremos em contato o quanto antes.</p>
+      </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>
+        &copy; 2025 Serviços Elétricos Regionais |
+        <a href="mailto:contato@servicoseletricos.com.br">Email de Contato</a>
+      </p>
+    </footer>
+  </body>
+</html>
