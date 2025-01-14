@@ -10,26 +10,60 @@ body {
 header {
   background: linear-gradient(90deg, #00008b, #1e90ff);
   color: white;
-  padding: 8px 0px;
-  font-size: 18px;
-  box-shadow: 0px 0px 5px;
+  padding: 1rem 2rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
 }
 
-header li {
-  list-style: none;
-  padding: 0px 10px;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Estilo do logotipo */
 header img {
   max-width: 150px;
-  margin-bottom: 10px;
-  margin-right: 1800px;
+  height: auto;
 }
 
-header h1 {
+/* Menu de navegação */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
   margin: 0;
-  font-size: 2rem;
-  font-family: "Times New Roman", Times, serif;
+  padding: 0;
+}
+
+.nav-menu li {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 body div h2 {
