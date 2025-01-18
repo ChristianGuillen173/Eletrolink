@@ -10,9 +10,27 @@ body {
 header {
   background: linear-gradient(90deg, #00008b, #1e90ff);
   color: white;
+  font-family: Arial, sans-serif;
   padding: 1rem 2rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
+}
+
+body div h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: #333;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+span {
+  color: #1e90ff;
 }
 
 .header-container {
@@ -47,6 +65,7 @@ header img {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
+  font-size: 20px;
 }
 
 .nav-menu a:hover {
@@ -66,10 +85,7 @@ header img {
   }
 }
 
-body div h2 {
-  color: white;
-  text-align: center;
-}
+/* Outros estilos existentes */
 
 .container {
   width: 90%;
@@ -81,10 +97,13 @@ body div h2 {
   padding: 2rem 0;
 }
 
+.section-contact {
+  padding: 2rem;
+}
+
 .services,
 .contact,
-.about,
-.cta {
+.about {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -92,7 +111,6 @@ body div h2 {
 
 .service-item,
 .contact-item,
-.cta-item,
 .about-item {
   background-color: white;
   border-radius: 8px;
@@ -113,8 +131,7 @@ body div h2 {
   margin: 0 auto;
 }
 
-.service-item h3,
-.cta h2 {
+.service-item h3 {
   color: #333;
 }
 
@@ -122,23 +139,6 @@ body div h2 {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
-}
-
-.cta {
-  background-color: #28a745;
-  color: white;
-  text-align: center;
-}
-
-.cta h2 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.cta p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #333;
 }
 
 footer {
@@ -154,6 +154,7 @@ footer a {
 }
 
 .form-section {
+  height: 100vh;
   padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -209,4 +210,74 @@ footer a {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+#pmsg {
+  text-align: center;
+  font-size: 13px;
+}
+
+#N-V
+/*#select-carg,
+#eletricista,
+#tec-ele,
+#ajud-geral,
+#enge-ele*/ {
+  display: none;
+}
+
+/* Estilo para a seção de contato */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+}
+
+.contact h3 {
+  color: #333;
+  text-align: center;
+}
+
+.contact p {
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 350px;
+}
+
+.contact-item h3 {
+  color: #333;
+  margin-bottom: 0.1rem;
+}
+
+.contact-item p {
+  margin: 0;
+}
+
+.contact-link {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }
